@@ -1,0 +1,149 @@
+/* Estilos básicos */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.section-limit {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+body {
+    background-color: #092c57;
+}
+
+.menu {
+    min-height: 656px;
+    background-color: #0B2545;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    box-shadow: 4px 5px 38px rgb(19, 17, 41);
+}
+
+/* Estilos da lista */
+.title {
+    font-size: 35px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.legend {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: aliceblue;
+    font-size: 24px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.text-green, .text-yellow, .text-red {
+    margin-left: 5px;
+}
+
+.green, .yellow, .red {
+    display: flex;
+    align-items: center;
+}
+
+.circle-green, .circle-yellow, .circle-red {
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.circle-green {
+    background-color: #35eb35;
+}
+
+.circle-yellow {
+    background-color: #e6e638;
+}
+
+.circle-red {
+    background-color: #E74C3C;
+}
+
+.add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.add input {
+    outline: none;
+}
+
+.add input:hover{
+    background-color: #e3e2e2;
+}
+
+.add input,
+.add select,
+.add button {
+    padding: 7px;
+    border-radius: 10px;
+    font-size: 17px;
+}
+
+.add select,
+.add button {
+    cursor: pointer;
+    margin-left: 5px;
+    outline: none;
+    border: none;
+}
+
+.add select:hover,
+.add button:hover {
+    background-color: #d4d4d4;
+}
+
+.list {
+    display: flex;
+    justify-content: center;
+}
+
+#lista {
+    min-width: 58%;
+    max-width: 85%;
+}
+
+#lista li, #complete li {
+    color: white;
+    font-size: 25px;
+    margin-left: 2px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+
+/* Estilização das tarefas concluídas */
+.title-complete {
+    text-align: center;
+    color: white;
+    font-size: 32px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.div-complete {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>AS</title>
+</head>
+
+<body>
+
+    <section class="menu section-limit">
+
+        <div class="title">
+            <h1>Lista de tarefas</h1>
+        </div>
+
+        <div class="legend">
+            <div class="green">
+                <p class="circle-green"></p>
+                <p class="text-green">Baixa</p>
+            </div>
+            
+            <div class="yellow">
+                <p class="circle-yellow"></p>
+                <p class="text-yellow">Média</p>
+            </div>
+
+            <div class="red">
+                <p class="circle-red"></p>
+                <p class="text-red">Alta</p>
+            </div>
+        </div>
+
+        <div class="add">
+            <input id="tarefa" type="text" placeholder="DIgite sua tarefa...">
+            <select name="" id="prioridade">
+                <option value="Baixa">Baixa</option>
+                <option value="Média">Média</option>
+                <option value="Alta">Alta</option>
+            </select>
+            <button onclick="adicionar()">Adicionar</button>
+        </div>
+
+        <div class="list">
+            <ul id="lista">
+
+            </ul>
+        </div>
+
+        <div class="div-complete">
+            <h2 class="title-complete">Tarefas Concluídas</h2>
+
+            <div>
+                <ul id="complete">
+                   
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
