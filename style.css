@@ -6,27 +6,32 @@
 }
 
 .section-limit {
-    max-width: 700px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
 body {
-    background-color: #092c57;
+    background-color: var(--bg-color);
 }
 
 .menu {
     min-height: 656px;
-    background-color: #0B2545;
+    background-color: #1a2c42;
     border-radius: 18px;
     display: flex;
     flex-direction: column;
     margin-top: 20px;
-    box-shadow: 4px 5px 38px rgb(19, 17, 41);
+    box-shadow: 0px 0px 28px rgb(19, 17, 41);
+}
+
+:root {
+    --bg-color: #0B2545;
+    ;
 }
 
 /* Estilos da lista */
 .title {
-    font-size: 35px;
+    font-size: 65px;
     color: white;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -38,38 +43,55 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: aliceblue;
-    font-size: 24px;
-    width: 300px;
+    gap: 30px;
+    font-size: 42px;
     margin: 0 auto;
 }
 
-.text-green, .text-yellow, .text-red {
+.text-green {
+    color: #208684;
+}
+
+.text-yellow {
+    color: #FCC361;
+}
+
+.text-red {
+    color: #E1444D;
+}
+
+.text-green,
+.text-yellow,
+.text-red {
     margin-left: 5px;
 }
 
-.green, .yellow, .red {
+.green,
+.yellow,
+.red {
     display: flex;
     align-items: center;
 }
 
-.circle-green, .circle-yellow, .circle-red {
-    width: 16px;
-    height: 16px;
+.circle-green,
+.circle-yellow,
+.circle-red {
+    width: 26px;
+    height: 26px;
     background-color: white;
     border-radius: 50%;
 }
 
 .circle-green {
-    background-color: #35eb35;
+    background-color: #208684;
 }
 
 .circle-yellow {
-    background-color: #e6e638;
+    background-color: #FCC361;
 }
 
 .circle-red {
-    background-color: #E74C3C;
+    background-color: #E1444D;
 }
 
 .add {
@@ -82,18 +104,37 @@ body {
 
 .add input {
     outline: none;
+    border: none;
+    background-color: #233D59;
+    color: white;
 }
 
-.add input:hover{
-    background-color: #e3e2e2;
+.add input:hover {
+    background-color: #2e4f73;
 }
 
 .add input,
 .add select,
 .add button {
-    padding: 7px;
+    padding: 12px;
     border-radius: 10px;
-    font-size: 17px;
+    font-size: 28px;
+}
+
+.add button {
+    background-color: #218785;
+}
+
+.add button:hover {
+    background-color: #35b0ae;
+}
+
+.add select {
+    background-color: #1d6c8f;
+}
+
+.add select:hover {
+    background-color: #365c85;
 }
 
 .add select,
@@ -102,11 +143,7 @@ body {
     margin-left: 5px;
     outline: none;
     border: none;
-}
-
-.add select:hover,
-.add button:hover {
-    background-color: #d4d4d4;
+    color: white;
 }
 
 .list {
@@ -119,7 +156,8 @@ body {
     max-width: 85%;
 }
 
-#lista li, #complete li {
+#lista li,
+#complete li {
     color: white;
     font-size: 25px;
     margin-left: 2px;
@@ -136,7 +174,7 @@ body {
 .title-complete {
     text-align: center;
     color: white;
-    font-size: 32px;
+    font-size: 48px;
     margin-top: 50px;
     margin-bottom: 10px;
 }

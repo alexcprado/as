@@ -9,24 +9,24 @@ function adicionar() {
 
     const li = document.createElement('li');
     li.textContent = `${textoTarefa} - ${nivelPrioridade} - ${pegarData()}`
+    li.style.cssText = `
+        padding: 10px;
+        font-size: 30px;
+    `
 
     if (tarefa.value === '') {
         return
     }
 
     if (prioridade.value === 'Baixa') {
-        li.style.border = '3px solid #35eb35'
-        li.style.backgroundColor = '#0c294c'
-        li.style.color = '#35eb35'
+        li.style.backgroundColor = '#233D59'
+        li.style.color = '#208684'
     } else if (prioridade.value === 'Média') {
-        li.style.border = '3px solid #e6e638'
-        li.style.backgroundColor = '#0c294c'
-        li.style.color = '#e6e638'
-
+        li.style.backgroundColor = '#233D59'
+        li.style.color = '#FCC361'
     } else {
-        li.style.border = '3px solid #E74C3C'
-        li.style.backgroundColor = '#0c294c'
-        li.style.color = '#E74C3C'
+        li.style.backgroundColor = '#233D59'
+        li.style.color = '#E1444D'
     }
 
     const btnRemover = document.createElement('button')
@@ -34,14 +34,22 @@ function adicionar() {
     btnRemover.style.cssText = `
         margin-left: 10px;
         padding: 8px;
-        font-size: 14px;
+        font-size: 17px;
         border-radius: 10px;
         border: none;
         cursor: pointer;
-        background-color: #E74C3C;
+        background-color: #d7464dff;
         font-weight: 100;
+        color: #fff;
     `
     btnRemover.addEventListener('click', function () { li.remove() })
+    btnRemover.addEventListener('mouseover', function () {
+        btnRemover.style.backgroundColor = '#b03131ff'
+    })  
+
+    btnRemover.addEventListener('mouseout', function () {
+        btnRemover.style.backgroundColor = '#d7464dff'
+    })
 
     li.appendChild(btnRemover)
 
@@ -50,23 +58,33 @@ function adicionar() {
     const btnComplete = document.createElement('button')
     btnComplete.textContent = "Concluir"
     btnComplete.style.cssText = `
-        margin-left:
+        margin-left: 3px;
+        padding: 8px;
+        font-size: 17px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        background-color: #25db7aff;
+        font-weight: 100;
+        color: #fff;
     `
-    btnComplete.style.marginLeft = '3px'
-    btnComplete.style.padding = '8px'
-    btnComplete.style.fontSize = '14px'
-    btnComplete.style.borderRadius = '10px'
-    btnComplete.style.border = 'none'
-    btnComplete.style.cursor = 'pointer'
-    btnComplete.style.backgroundColor = '#35eb35'
-    btnComplete.style.fontWeight = '100'
+    btnComplete.addEventListener('mouseover', function () {
+        btnComplete.style.backgroundColor = '#1d8f5aff'
+    })
+    btnComplete.addEventListener('mouseout', function () {
+        btnComplete.style.backgroundColor = '#25db7aff'
+    })
 
     btnComplete.addEventListener('click', function () {
         li.remove()
         const liComplete = document.createElement('li')
         liComplete.textContent = `${textoTarefa} - ${nivelPrioridade} - ${pegarData()}`
-        liComplete.style.border = '3px solid rgb(11, 11, 70)'
-        liComplete.style.color = 'rgb(220, 218, 218)'
+        liComplete.style.cssText = `
+            padding: 10px;
+            font-size: 30px;
+            background-color: #233D59;
+            color: #eae8e8ff;
+        `
         complete.appendChild(liComplete)
     })
 
